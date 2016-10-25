@@ -20,3 +20,15 @@ c:\users\debasis.mondal\documents\visual studio 2015\Projects\IRCTC-QuickBooking
 c:\users\debasis.mondal\documents\visual studio 2015\Projects\IRCTC-QuickBooking\IRCTC-QuickBooking\bin\Debug\Telerik.WinControls.Themes.Breeze.dll
 c:\users\debasis.mondal\documents\visual studio 2015\Projects\IRCTC-QuickBooking\IRCTC-QuickBooking\bin\Debug\Newtonsoft.Json.dll
 c:\users\debasis.mondal\documents\visual studio 2015\Projects\IRCTC-QuickBooking\IRCTC-QuickBooking\bin\Debug\Newtonsoft.Json.xml
+C:\Users\debasis.mondal\Documents\git Repos\IRCTCProject\IRCTC-QuickBooking\IRCTC-QuickBooking\bin\Debug\IRCTC-QuickBooking.exe.config
+C:\Users\debasis.mondal\Documents\git Repos\IRCTCProject\IRCTC-QuickBooking\IRCTC-QuickBooking\obj\Debug\IRCTC-QuickBooking.exe
+C:\Users\debasis.mondal\Documents\git Repos\IRCTCProject\IRCTC-QuickBooking\IRCTC-QuickBooking\obj\Debug\IRCTC-QuickBooking.pdb
+C:\Users\debasis.mondal\Documents\git Repos\IRCTCProject\IRCTC-QuickBooking\IRCTC-QuickBooking\bin\Debug\IRCTC-QuickBooking.exe
+C:\Users\debasis.mondal\Documents\git Repos\IRCTCProject\IRCTC-QuickBooking\IRCTC-QuickBooking\bin\Debug\IRCTC-QuickBooking.pdb
+C:\Users\debasis.mondal\Documents\git Repos\IRCTCProject\IRCTC-QuickBooking\IRCTC-QuickBooking\bin\Debug\Newtonsoft.Json.dll
+C:\Users\debasis.mondal\Documents\git Repos\IRCTCProject\IRCTC-QuickBooking\IRCTC-QuickBooking\bin\Debug\Newtonsoft.Json.xml
+C:\Users\debasis.mondal\Documents\git Repos\IRCTCProject\IRCTC-QuickBooking\IRCTC-QuickBooking\obj\Debug\IRCTC-QuickBooking.csprojResolveAssemblyReference.cache
+C:\Users\debasis.mondal\Documents\git Repos\IRCTCProject\IRCTC-QuickBooking\IRCTC-QuickBooking\obj\Debug\IRCTC_QuickBooking.Form1.resources
+C:\Users\debasis.mondal\Documents\git Repos\IRCTCProject\IRCTC-QuickBooking\IRCTC-QuickBooking\obj\Debug\IRCTC_QuickBooking.Properties.Resources.resources
+C:\Users\debasis.mondal\Documents\git Repos\IRCTCProject\IRCTC-QuickBooking\IRCTC-QuickBooking\obj\Debug\IRCTC-QuickBooking.csproj.GenerateResource.Cache
+C:\Users\debasis.mondal\Documents\git Repos\IRCTCProject\IRCTC-QuickBooking\IRCTC-QuickBooking\obj\Debug\IRCTC-QuickBooking.exe.licenses

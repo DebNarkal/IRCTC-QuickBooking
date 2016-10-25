@@ -40,7 +40,7 @@ namespace IRCTC_QuickBooking
             req.KeepAlive = false;
             req.Timeout = System.Threading.Timeout.Infinite;
 
-            string postData = string.Format($"stn1={frmStn.Text.Substring(frmStn.Text.IndexOf('-')+1)}&stn2={toStn.Text.Substring(toStn.Text.IndexOf('-') + 1)}");
+            string postData = string.Format("stn1={0}&stn2={1}", frmStn.Text.Substring(frmStn.Text.IndexOf('-') + 1), toStn.Text.Substring(toStn.Text.IndexOf('-') + 1));
             byte[] credentials = Encoding.UTF8.GetBytes(postData);
             req.ContentLength = credentials.Length;
             using (Stream stWrite = req.GetRequestStream())
