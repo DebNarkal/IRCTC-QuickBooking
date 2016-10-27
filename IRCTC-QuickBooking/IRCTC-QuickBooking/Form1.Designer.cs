@@ -30,16 +30,11 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.frmStn = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.doj = new System.Windows.Forms.DateTimePicker();
             this.toStn = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.TrainNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrainName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Seat = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -61,15 +56,16 @@
             this.frmStn.TabIndex = 1;
             this.frmStn.TextChanged += new System.EventHandler(this.frmStn_TextChanged);
             // 
-            // dateTimePicker1
+            // doj
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.CustomFormat = "";
-            this.dateTimePicker1.Location = new System.Drawing.Point(137, 149);
-            this.dateTimePicker1.MinDate = new System.DateTime(2016, 10, 6, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(246, 22);
-            this.dateTimePicker1.TabIndex = 3;
+            this.doj.CalendarFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.doj.CustomFormat = "";
+            this.doj.Location = new System.Drawing.Point(137, 149);
+            this.doj.MinDate = new System.DateTime(2016, 10, 27, 0, 0, 0, 0);
+            this.doj.Name = "doj";
+            this.doj.Size = new System.Drawing.Size(246, 22);
+            this.doj.TabIndex = 3;
+            this.doj.Value = new System.DateTime(2016, 11, 5, 0, 0, 0, 0);
             // 
             // toStn
             // 
@@ -110,53 +106,20 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Journey Date:";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TrainNo,
-            this.TrainName,
-            this.Seat});
-            this.dataGridView1.Location = new System.Drawing.Point(143, 205);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(441, 150);
-            this.dataGridView1.TabIndex = 8;
-            // 
-            // TrainNo
-            // 
-            this.TrainNo.HeaderText = "Train No";
-            this.TrainNo.Name = "TrainNo";
-            this.TrainNo.ReadOnly = true;
-            // 
-            // TrainName
-            // 
-            this.TrainName.HeaderText = "TrainName";
-            this.TrainName.Name = "TrainName";
-            this.TrainName.ReadOnly = true;
-            // 
-            // Seat
-            // 
-            this.Seat.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.Seat.HeaderText = "Seat";
-            this.Seat.Name = "Seat";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 451);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.toStn);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.doj);
             this.Controls.Add(this.frmStn);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,15 +128,11 @@
         #endregion
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox frmStn;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker doj;
         private System.Windows.Forms.TextBox toStn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TrainNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TrainName;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Seat;
     }
 }
 

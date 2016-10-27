@@ -20,7 +20,7 @@ namespace IRCTC_QuickBooking
             {
                 Application.Run(new Form1());
             }
-            catch (Exception) { }
+            catch (Exception e) { }
         }
     }
 }

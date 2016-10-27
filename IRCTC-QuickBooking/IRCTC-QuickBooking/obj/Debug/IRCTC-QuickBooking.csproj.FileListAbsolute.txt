@@ -32,3 +32,5 @@ C:\Users\debasis.mondal\Documents\git Repos\IRCTCProject\IRCTC-QuickBooking\IRCT
 C:\Users\debasis.mondal\Documents\git Repos\IRCTCProject\IRCTC-QuickBooking\IRCTC-QuickBooking\obj\Debug\IRCTC_QuickBooking.Properties.Resources.resources
 C:\Users\debasis.mondal\Documents\git Repos\IRCTCProject\IRCTC-QuickBooking\IRCTC-QuickBooking\obj\Debug\IRCTC-QuickBooking.csproj.GenerateResource.Cache
 C:\Users\debasis.mondal\Documents\git Repos\IRCTCProject\IRCTC-QuickBooking\IRCTC-QuickBooking\obj\Debug\IRCTC-QuickBooking.exe.licenses
+C:\Users\debasis.mondal\Documents\git Repos\IRCTCProject\IRCTC-QuickBooking\IRCTC-QuickBooking\bin\Debug\QuickBookingLogic.dll
+C:\Users\debasis.mondal\Documents\git Repos\IRCTCProject\IRCTC-QuickBooking\IRCTC-QuickBooking\bin\Debug\QuickBookingLogic.pdb
