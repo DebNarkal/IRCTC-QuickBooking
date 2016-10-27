@@ -38,7 +38,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.TrainNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TrainName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.seat = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Seat = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,7 +116,7 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TrainNo,
             this.TrainName,
-            this.seat});
+            this.Seat});
             this.dataGridView1.Location = new System.Drawing.Point(143, 205);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
@@ -125,24 +125,21 @@
             // 
             // TrainNo
             // 
-            this.TrainNo.Frozen = true;
-            this.TrainNo.HeaderText = "Train No.";
+            this.TrainNo.HeaderText = "Train No";
             this.TrainNo.Name = "TrainNo";
             this.TrainNo.ReadOnly = true;
             // 
             // TrainName
             // 
-            this.TrainName.Frozen = true;
-            this.TrainName.HeaderText = "Train Name";
+            this.TrainName.HeaderText = "TrainName";
             this.TrainName.Name = "TrainName";
             this.TrainName.ReadOnly = true;
             // 
-            // seat
+            // Seat
             // 
-            this.seat.HeaderText = "Seat Pref";
-            this.seat.Name = "seat";
-            this.seat.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.seat.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Seat.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.Seat.HeaderText = "Seat";
+            this.Seat.Name = "Seat";
             // 
             // Form1
             // 
@@ -176,7 +173,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrainNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn TrainName;
-        private System.Windows.Forms.DataGridViewComboBoxColumn seat;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Seat;
     }
 }
 

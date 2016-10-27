@@ -58,10 +58,11 @@ namespace IRCTC_QuickBooking
             JObject jsondata = (JObject)JsonConvert.DeserializeObject(result);
             string trainInfo = jsondata["data"].ToString();
             string[] trains = trainInfo.Split(';');
-            //string day = dateTimePicker1.Text;
-            //ComboBox cb = new ComboBox();
-            //cb.Items.Add("1A");
-            //((DataGridViewComboBoxColumn)dataGridView1.Columns["MyDataGridColumnName"]).DataSource = cb.Items;
+            dataGridView1.Rows.Add("12131", "Train");
+            DataGridViewComboBoxCell cb = (DataGridViewComboBoxCell)dataGridView1.Rows[0].Cells["Seat"];
+            cb.Items.Add("1AC");
+            cb.Items.Add("2AC");
+            cb.Items.Add("CC");
         }
 
 
@@ -74,6 +75,7 @@ namespace IRCTC_QuickBooking
         {
             AutoCompleteStringCollection allowedTypes = new AutoCompleteStringCollection();
             List<string> res = new List<string>();
+            res.Clear();
             foreach (string stn in StationCodes.Stations)
             {
                 if (stn.Contains(frmStn.Text.ToUpper()))
