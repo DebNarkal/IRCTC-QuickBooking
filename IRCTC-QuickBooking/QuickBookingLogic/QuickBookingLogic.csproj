@@ -43,8 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IListOfTrains.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TrainLists.cs" />
+    <Compile Include="TrainsForTheDay.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

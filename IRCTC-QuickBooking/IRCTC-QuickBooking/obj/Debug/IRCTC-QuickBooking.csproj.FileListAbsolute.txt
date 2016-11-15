@@ -34,3 +34,9 @@ C:\Users\debasis.mondal\Documents\git Repos\IRCTCProject\IRCTC-QuickBooking\IRCT
 C:\Users\debasis.mondal\Documents\git Repos\IRCTCProject\IRCTC-QuickBooking\IRCTC-QuickBooking\obj\Debug\IRCTC-QuickBooking.exe.licenses
 C:\Users\debasis.mondal\Documents\git Repos\IRCTCProject\IRCTC-QuickBooking\IRCTC-QuickBooking\bin\Debug\QuickBookingLogic.dll
 C:\Users\debasis.mondal\Documents\git Repos\IRCTCProject\IRCTC-QuickBooking\IRCTC-QuickBooking\bin\Debug\QuickBookingLogic.pdb
+C:\Users\debasis.mondal\Documents\git Repos\IRCTCProject\IRCTC-QuickBooking\IRCTC-QuickBooking\bin\Debug\ThoughtWorks.Selenium.Core.dll
+C:\Users\debasis.mondal\Documents\git Repos\IRCTCProject\IRCTC-QuickBooking\IRCTC-QuickBooking\bin\Debug\WebDriver.dll
+C:\Users\debasis.mondal\Documents\git Repos\IRCTCProject\IRCTC-QuickBooking\IRCTC-QuickBooking\bin\Debug\WebDriver.Support.dll
+C:\Users\debasis.mondal\Documents\git Repos\IRCTCProject\IRCTC-QuickBooking\IRCTC-QuickBooking\bin\Debug\ThoughtWorks.Selenium.Core.xml
+C:\Users\debasis.mondal\Documents\git Repos\IRCTCProject\IRCTC-QuickBooking\IRCTC-QuickBooking\bin\Debug\WebDriver.xml
+C:\Users\debasis.mondal\Documents\git Repos\IRCTCProject\IRCTC-QuickBooking\IRCTC-QuickBooking\bin\Debug\WebDriver.Support.xml
