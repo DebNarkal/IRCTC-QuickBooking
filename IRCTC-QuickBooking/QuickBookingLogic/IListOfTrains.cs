@@ -9,7 +9,7 @@ namespace QuickBookingLogic
 {
     public interface IListOfTrains
     {
-        string[] trains{get; set;}
+        List<string> trains{get; set;}
         string postData { get; set; }
         void GetTrains();
     }

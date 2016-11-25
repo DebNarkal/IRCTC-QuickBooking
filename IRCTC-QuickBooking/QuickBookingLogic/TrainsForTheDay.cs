@@ -21,36 +21,37 @@ namespace QuickBookingLogic
             List<string> trains = new List<string>();
             foreach (var trainInfo in trainListss.trains)
             {
-                string[] trainDetails = trainInfo.Split(',');
+                string[] trainDetails = trainInfo.Split('\n');
+                trainDetails = trainDetails.Where(str => str.Trim() != "").ToArray();
                 switch (_day)
                 {
-                    case "Sunday":
-                        if (trainDetails[8] == "1")
-                            trains.Add(trainInfo);
-                        break;
                     case "Monday":
-                        if (trainDetails[9] == "1")
-                            trains.Add(trainInfo);
+                        if (trainDetails[6] == "Y")
+                            trains.Add(trainDetails[0].Trim() + " " + trainDetails[1].Trim());
                         break;
                     case "Tuesday":
-                        if (trainDetails[10] == "1")
-                            trains.Add(trainInfo);
+                        if (trainDetails[7] == "Y")
+                            trains.Add(trainDetails[0].Trim() + " " + trainDetails[1].Trim());
                         break;
                     case "Wednesday":
-                        if (trainDetails[11] == "1")
-                            trains.Add(trainInfo);
+                        if (trainDetails[8] == "Y")
+                            trains.Add(trainDetails[0].Trim() + " " + trainDetails[1].Trim());
                         break;
                     case "Thursday":
-                        if (trainDetails[12] == "1")
-                            trains.Add(trainInfo);
+                        if (trainDetails[9] == "Y")
+                            trains.Add(trainDetails[0].Trim() + " " + trainDetails[1].Trim());
                         break;
                     case "Friday":
-                        if (trainDetails[13] == "1")
-                            trains.Add(trainInfo);
+                        if (trainDetails[10] == "Y")
+                            trains.Add(trainDetails[0].Trim() + " " + trainDetails[1].Trim());
                         break;
                     case "Saturday":
-                        if (trainDetails[14] == "1")
-                            trains.Add(trainInfo);
+                        if (trainDetails[11] == "Y")
+                            trains.Add(trainDetails[0].Trim() + " " + trainDetails[1].Trim());
+                        break;
+                    case "Sunday":
+                        if (trainDetails[12] == "Y")
+                            trains.Add(trainDetails[0].Trim() + " " + trainDetails[1].Trim());
                         break;
                 }
             }
