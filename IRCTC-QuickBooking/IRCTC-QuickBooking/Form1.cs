@@ -19,6 +19,8 @@ namespace IRCTC_QuickBooking
         TimeSpan waitTimeSpan = new TimeSpan();
         FirefoxDriver Browser;
         WebDriverWait Waiter;
+        AutoCompleteStringCollection allowedTypes = new AutoCompleteStringCollection();
+        
         public Form1()
         {
             GetStationCodes.PopulateStation();
@@ -26,104 +28,56 @@ namespace IRCTC_QuickBooking
             doj.MinDate = DateTime.Today;
             doj.MaxDate = doj.MinDate.AddDays(90);
             doj.Value = DateTime.Today;
-            //avlTrains.Text = "Select Train";
             waitTimeSpan = TimeSpan.FromMilliseconds(50);
-            
+            for (int i = 1; i < 7; i++)
+            {
+                this.dataGridViewPassengerDetails.Rows.Add(i.ToString());
+            }
+            allowedTypes.AddRange(StationCodes.Stations);
+            frmStn.AutoCompleteCustomSource = allowedTypes;
+            frmStn.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            frmStn.AutoCompleteMode = AutoCompleteMode.Suggest;
+            toStn.AutoCompleteCustomSource = allowedTypes;
+            toStn.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            toStn.AutoCompleteMode = AutoCompleteMode.Suggest;
         }
 
 
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonTrainList_Click(object sender, EventArgs e)
         {
             //string postDatas = string.Format("stn1={0}&stn2={1}", frmStn.Text.Substring(frmStn.Text.IndexOf('-') + 1), toStn.Text.Substring(toStn.Text.IndexOf('-') + 1));
-            ////string[] resultSet = TrainLists.GetTrains(req, postData);
-            //TrainsForTheDay getListOfTrains = new TrainsForTheDay(new TrainLists() { postData = postDatas }, doj.Value.DayOfWeek.ToString());
-            //List<string> listOfTrains = getListOfTrains.trainLists();
-            //avlTrains.Enabled = true;
-            //foreach (var train in listOfTrains)
+            string postDatas = string.Format("pnrQ={0}&dest={1}", frmStn.Text.Substring(frmStn.Text.IndexOf('-') + 1), toStn.Text.Substring(toStn.Text.IndexOf('-') + 1));
+            TrainsForTheDay getListOfTrains = new TrainsForTheDay(new TrainLists() { postData = postDatas }, doj.Value.DayOfWeek.ToString());
+            List<string> listOfTrains = new List<string>();
+            listOfTrains = getListOfTrains.trainLists();
+            AutoCompleteStringCollection trainHints = new AutoCompleteStringCollection();
+            trainHints.AddRange(listOfTrains.ToArray());
+            textBoxTrains.Clear();
+
+            textBoxTrains.AutoCompleteCustomSource = trainHints;
+            textBoxTrains.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            textBoxTrains.AutoCompleteMode = AutoCompleteMode.Suggest;            
+            //if (Browser == null)
             //{
-            //    string[] traindet = train.Split(',');
-            //    avlTrains.Items.Add(traindet[0] + "-" + traindet[1] + "-" + traindet[2]);
+            //    Browser = new FirefoxDriver();
+            //    Waiter = new WebDriverWait(Browser, TimeSpan.FromMinutes(5));
             //}
-            if (Browser == null)
-            {
-                Browser = new FirefoxDriver();
-                Waiter = new WebDriverWait(Browser, TimeSpan.FromMinutes(5));
-            }
-            Browser.Url = "https://www.irctc.co.in/eticketing/loginHome.jsf";
-            Browser.FindElementById("usernameId").SendKeys("Bibek009");
-            Browser.FindElementByName("j_password").SendKeys("Bgs556");
-            Waiter.Until(ExpectedConditions.ElementExists(By.Name("jpform:fromStation")));
-            Browser.FindElementByName("jpform:fromStation").SendKeys("ASANSOL JN - ASN");
-            Browser.FindElementById("jpform:toStation").SendKeys("PATNA JN - PNBE");
-            Browser.FindElementById("jpform:journeyDateInputDate").SendKeys(doj.Value.ToString("dd-MM-yyyy"));
-            Browser.FindElementById("jpform:jpsubmit").Click();
-            Browser.FindElementByXPath("//td/a[contains(text(),'12333')]/ancestor::tr/td[16]/a[contains(text(),'SL')]").Click();
+            //Browser.Url = "https://www.irctc.co.in/eticketing/loginHome.jsf";
+            //Browser.FindElementById("usernameId").SendKeys("Bibek009");
+            //Browser.FindElementByName("j_password").SendKeys("Bgs556");
+            //Waiter.Until(ExpectedConditions.ElementExists(By.Name("jpform:fromStation")));
+            //Browser.FindElementByName("jpform:fromStation").SendKeys("ASANSOL JN - ASN");
+            //Browser.FindElementById("jpform:toStation").SendKeys("PATNA JN - PNBE");
+            //Browser.FindElementById("jpform:journeyDateInputDate").SendKeys(doj.Value.ToString("dd-MM-yyyy"));
+            //Browser.FindElementById("jpform:jpsubmit").Click();
+            //Browser.FindElementByXPath("//td/a[contains(text(),'12333')]/ancestor::tr/td[16]/a[contains(text(),'SL')]").Click();
 
         }
-        object obj = new object();
-        private void frmStn_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                AutoCompleteStringCollection allowedTypes = new AutoCompleteStringCollection();
-                List<string> res = new List<string>();
-                //frmStn.AutoCompleteCustomSource = null;
-                Thread.Sleep(waitTimeSpan);
-                lock (obj)
-                {
-                    res.Clear();
-                    allowedTypes.Clear();
-                    foreach (string stn in StationCodes.Stations)
-                    {
-                        if (stn.Contains(frmStn.Text.ToUpper()))
-                            res.Add(stn);
-                    }
-                }
-                lock (obj)
-                {
-                    allowedTypes.AddRange(res.ToArray());
-                }
-                frmStn.AutoCompleteCustomSource = allowedTypes;
-                frmStn.AutoCompleteMode = AutoCompleteMode.Suggest;
-                frmStn.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            }
-            catch (Exception ex2)
-            {
-                
-                
-            }
-        }
+        object obj = new object();        
 
-        private void toStn_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                AutoCompleteStringCollection allowedTypes = new AutoCompleteStringCollection();
-                List<string> res = new List<string>();
-                //toStn.AutoCompleteCustomSource = null;
-                Thread.Sleep(waitTimeSpan);
-                lock (obj)
-                {
-                    foreach (string stn in StationCodes.Stations)
-                    {
-                        if (stn.Contains(toStn.Text.ToUpper()))
-                            res.Add(stn);
-                    }
-                }
-                lock (obj)
-                {
-                    allowedTypes.AddRange(res.ToArray());
-                }
-                toStn.AutoCompleteCustomSource = allowedTypes;
-                toStn.AutoCompleteMode = AutoCompleteMode.Suggest;
-                toStn.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            }
-            catch(Exception exc)
-            {
+       
 
-            }
-
-        }
+        
     }
 }
