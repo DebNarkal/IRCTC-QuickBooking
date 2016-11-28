@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonTrainList = new System.Windows.Forms.Button();
             this.frmStn = new System.Windows.Forms.TextBox();
             this.doj = new System.Windows.Forms.DateTimePicker();
@@ -46,6 +46,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pleaseWait1 = new IRCTC_QuickBooking.PleaseWait();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridViewPassengerDetails = new System.Windows.Forms.DataGridView();
             this.sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,6 +61,8 @@
             this.radioButtonPhyHand = new System.Windows.Forms.RadioButton();
             this.radioButtonPremTat = new System.Windows.Forms.RadioButton();
             this.radioButtonGen = new System.Windows.Forms.RadioButton();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.buttonBookNow = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -232,6 +235,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.pleaseWait1);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.frmStn);
             this.groupBox2.Controls.Add(this.comboBox1);
@@ -251,6 +255,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Journey Details";
             // 
+            // pleaseWait1
+            // 
+            this.pleaseWait1.Location = new System.Drawing.Point(20, 184);
+            this.pleaseWait1.Name = "pleaseWait1";
+            this.pleaseWait1.Size = new System.Drawing.Size(361, 30);
+            this.pleaseWait1.TabIndex = 75;
+            this.pleaseWait1.Visible = false;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dataGridViewPassengerDetails);
@@ -267,8 +279,8 @@
             this.dataGridViewPassengerDetails.AllowUserToAddRows = false;
             this.dataGridViewPassengerDetails.AllowUserToDeleteRows = false;
             this.dataGridViewPassengerDetails.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridViewPassengerDetails.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridViewPassengerDetails.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewPassengerDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPassengerDetails.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.sno,
@@ -409,11 +421,22 @@
             this.radioButtonGen.Text = "General";
             this.radioButtonGen.UseVisualStyleBackColor = true;
             // 
+            // buttonBookNow
+            // 
+            this.buttonBookNow.Location = new System.Drawing.Point(778, 507);
+            this.buttonBookNow.Name = "buttonBookNow";
+            this.buttonBookNow.Size = new System.Drawing.Size(105, 23);
+            this.buttonBookNow.TabIndex = 75;
+            this.buttonBookNow.Text = "Book Now";
+            this.buttonBookNow.UseVisualStyleBackColor = true;
+            this.buttonBookNow.Click += new System.EventHandler(this.buttonBookNow_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1367, 666);
+            this.Controls.Add(this.buttonBookNow);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -464,6 +487,9 @@
         private System.Windows.Forms.RadioButton radioButtonPhyHand;
         private System.Windows.Forms.RadioButton radioButtonPremTat;
         private System.Windows.Forms.RadioButton radioButtonGen;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private PleaseWait pleaseWait1;
+        private System.Windows.Forms.Button buttonBookNow;
     }
 }
 
