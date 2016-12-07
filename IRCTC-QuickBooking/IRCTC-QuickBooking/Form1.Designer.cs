@@ -43,9 +43,12 @@
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.textBoxTrains = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxJourneyClass = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBoxBoardingPoint = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.pleaseWait1 = new IRCTC_QuickBooking.PleaseWait();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridViewPassengerDetails = new System.Windows.Forms.DataGridView();
@@ -61,7 +64,6 @@
             this.radioButtonPhyHand = new System.Windows.Forms.RadioButton();
             this.radioButtonPremTat = new System.Windows.Forms.RadioButton();
             this.radioButtonGen = new System.Windows.Forms.RadioButton();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.buttonBookNow = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -73,7 +75,7 @@
             // buttonTrainList
             // 
             this.buttonTrainList.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTrainList.Location = new System.Drawing.Point(128, 191);
+            this.buttonTrainList.Location = new System.Drawing.Point(128, 227);
             this.buttonTrainList.Name = "buttonTrainList";
             this.buttonTrainList.Size = new System.Drawing.Size(114, 23);
             this.buttonTrainList.TabIndex = 50;
@@ -93,7 +95,7 @@
             // 
             this.doj.CalendarFont = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.doj.CustomFormat = "";
-            this.doj.Location = new System.Drawing.Point(154, 140);
+            this.doj.Location = new System.Drawing.Point(154, 180);
             this.doj.MinDate = new System.DateTime(2016, 10, 27, 0, 0, 0, 0);
             this.doj.Name = "doj";
             this.doj.Size = new System.Drawing.Size(222, 22);
@@ -122,7 +124,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(28, 93);
+            this.label2.Location = new System.Drawing.Point(49, 93);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 22);
             this.label2.TabIndex = 6;
@@ -132,7 +134,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 140);
+            this.label3.Location = new System.Drawing.Point(28, 180);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(119, 22);
             this.label3.TabIndex = 7;
@@ -142,7 +144,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(28, 259);
+            this.label4.Location = new System.Drawing.Point(28, 298);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(126, 22);
             this.label4.TabIndex = 9;
@@ -188,7 +190,7 @@
             // textBoxTrains
             // 
             this.textBoxTrains.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTrains.Location = new System.Drawing.Point(154, 256);
+            this.textBoxTrains.Location = new System.Drawing.Point(154, 295);
             this.textBoxTrains.Name = "textBoxTrains";
             this.textBoxTrains.Size = new System.Drawing.Size(222, 30);
             this.textBoxTrains.TabIndex = 60;
@@ -197,27 +199,21 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(28, 308);
+            this.label7.Location = new System.Drawing.Point(28, 347);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 22);
             this.label7.TabIndex = 61;
             this.label7.Text = "Class:";
             // 
-            // comboBox1
+            // comboBoxJourneyClass
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "1A",
-            "2A",
-            "3A",
-            "CC",
-            "SL",
-            "2S"});
-            this.comboBox1.Location = new System.Drawing.Point(154, 306);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(222, 24);
-            this.comboBox1.TabIndex = 70;
+            this.comboBoxJourneyClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxJourneyClass.FormattingEnabled = true;
+            this.comboBoxJourneyClass.Location = new System.Drawing.Point(154, 345);
+            this.comboBoxJourneyClass.Name = "comboBoxJourneyClass";
+            this.comboBoxJourneyClass.Size = new System.Drawing.Size(222, 24);
+            this.comboBoxJourneyClass.TabIndex = 70;
+            this.comboBoxJourneyClass.SelectedIndexChanged += new System.EventHandler(this.comboBoxJourneyClass_SelectedIndexChanged);
             // 
             // groupBox1
             // 
@@ -235,10 +231,13 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.textBoxBoardingPoint);
+            this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.pleaseWait1);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.frmStn);
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.comboBoxJourneyClass);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.buttonTrainList);
             this.groupBox2.Controls.Add(this.label7);
@@ -255,9 +254,42 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Journey Details";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(11, 137);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(135, 22);
+            this.label9.TabIndex = 78;
+            this.label9.Text = "Boarding Point:";
+            this.label9.Visible = false;
+            // 
+            // textBoxBoardingPoint
+            // 
+            this.textBoxBoardingPoint.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBoardingPoint.Location = new System.Drawing.Point(154, 134);
+            this.textBoxBoardingPoint.Name = "textBoxBoardingPoint";
+            this.textBoxBoardingPoint.Size = new System.Drawing.Size(222, 30);
+            this.textBoxBoardingPoint.TabIndex = 77;
+            this.textBoxBoardingPoint.Visible = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(14, 137);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(381, 22);
+            this.label8.TabIndex = 76;
+            this.label8.Text = "Click Here if you have different boarding point";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
             // pleaseWait1
             // 
-            this.pleaseWait1.Location = new System.Drawing.Point(20, 184);
+            this.pleaseWait1.Location = new System.Drawing.Point(20, 224);
             this.pleaseWait1.Name = "pleaseWait1";
             this.pleaseWait1.Size = new System.Drawing.Size(361, 30);
             this.pleaseWait1.TabIndex = 75;
@@ -349,6 +381,7 @@
             // 
             this.SeniorCitizen.HeaderText = "Senior Citizen";
             this.SeniorCitizen.Name = "SeniorCitizen";
+            this.SeniorCitizen.ToolTipText = "Please carry a valid ID proof for senior citizen";
             this.SeniorCitizen.Width = 70;
             // 
             // groupBox4
@@ -369,45 +402,45 @@
             // radioButtonTatkal
             // 
             this.radioButtonTatkal.AutoSize = true;
-            this.radioButtonTatkal.Location = new System.Drawing.Point(655, 21);
+            this.radioButtonTatkal.Location = new System.Drawing.Point(673, 21);
             this.radioButtonTatkal.Name = "radioButtonTatkal";
-            this.radioButtonTatkal.Size = new System.Drawing.Size(74, 21);
+            this.radioButtonTatkal.Size = new System.Drawing.Size(88, 21);
             this.radioButtonTatkal.TabIndex = 4;
             this.radioButtonTatkal.TabStop = true;
-            this.radioButtonTatkal.Text = "Tatkal";
+            this.radioButtonTatkal.Text = "TATKAL";
             this.radioButtonTatkal.UseVisualStyleBackColor = true;
             // 
             // radioButtonLadies
             // 
             this.radioButtonLadies.AutoSize = true;
-            this.radioButtonLadies.Location = new System.Drawing.Point(543, 21);
+            this.radioButtonLadies.Location = new System.Drawing.Point(577, 21);
             this.radioButtonLadies.Name = "radioButtonLadies";
-            this.radioButtonLadies.Size = new System.Drawing.Size(77, 21);
+            this.radioButtonLadies.Size = new System.Drawing.Size(83, 21);
             this.radioButtonLadies.TabIndex = 3;
             this.radioButtonLadies.TabStop = true;
-            this.radioButtonLadies.Text = "Ladies";
+            this.radioButtonLadies.Text = "LADIES";
             this.radioButtonLadies.UseVisualStyleBackColor = true;
             // 
             // radioButtonPhyHand
             // 
             this.radioButtonPhyHand.AutoSize = true;
-            this.radioButtonPhyHand.Location = new System.Drawing.Point(349, 21);
+            this.radioButtonPhyHand.Location = new System.Drawing.Point(354, 21);
             this.radioButtonPhyHand.Name = "radioButtonPhyHand";
-            this.radioButtonPhyHand.Size = new System.Drawing.Size(174, 21);
+            this.radioButtonPhyHand.Size = new System.Drawing.Size(209, 21);
             this.radioButtonPhyHand.TabIndex = 2;
             this.radioButtonPhyHand.TabStop = true;
-            this.radioButtonPhyHand.Text = "Physically Handicap";
+            this.radioButtonPhyHand.Text = "PHYSICALLY HANDICAP \t";
             this.radioButtonPhyHand.UseVisualStyleBackColor = true;
             // 
             // radioButtonPremTat
             // 
             this.radioButtonPremTat.AutoSize = true;
-            this.radioButtonPremTat.Location = new System.Drawing.Point(180, 21);
+            this.radioButtonPremTat.Location = new System.Drawing.Point(176, 21);
             this.radioButtonPremTat.Name = "radioButtonPremTat";
-            this.radioButtonPremTat.Size = new System.Drawing.Size(141, 21);
+            this.radioButtonPremTat.Size = new System.Drawing.Size(163, 21);
             this.radioButtonPremTat.TabIndex = 1;
             this.radioButtonPremTat.TabStop = true;
-            this.radioButtonPremTat.Text = "Premium Tatkal";
+            this.radioButtonPremTat.Text = "PREMIUM TATKAL";
             this.radioButtonPremTat.UseVisualStyleBackColor = true;
             // 
             // radioButtonGen
@@ -415,15 +448,15 @@
             this.radioButtonGen.AutoSize = true;
             this.radioButtonGen.Location = new System.Drawing.Point(60, 21);
             this.radioButtonGen.Name = "radioButtonGen";
-            this.radioButtonGen.Size = new System.Drawing.Size(87, 21);
+            this.radioButtonGen.Size = new System.Drawing.Size(102, 21);
             this.radioButtonGen.TabIndex = 0;
             this.radioButtonGen.TabStop = true;
-            this.radioButtonGen.Text = "General";
+            this.radioButtonGen.Text = "GENERAL";
             this.radioButtonGen.UseVisualStyleBackColor = true;
             // 
             // buttonBookNow
             // 
-            this.buttonBookNow.Location = new System.Drawing.Point(778, 507);
+            this.buttonBookNow.Location = new System.Drawing.Point(783, 615);
             this.buttonBookNow.Name = "buttonBookNow";
             this.buttonBookNow.Size = new System.Drawing.Size(105, 23);
             this.buttonBookNow.TabIndex = 75;
@@ -443,6 +476,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -470,26 +504,28 @@
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.TextBox textBoxTrains;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxJourneyClass;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         public System.Windows.Forms.DataGridView dataGridViewPassengerDetails;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Age;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Gender;
-        private System.Windows.Forms.DataGridViewComboBoxColumn BerthPreference;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn SeniorCitizen;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.RadioButton radioButtonTatkal;
         private System.Windows.Forms.RadioButton radioButtonLadies;
         private System.Windows.Forms.RadioButton radioButtonPhyHand;
         private System.Windows.Forms.RadioButton radioButtonPremTat;
         private System.Windows.Forms.RadioButton radioButtonGen;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private PleaseWait pleaseWait1;
         private System.Windows.Forms.Button buttonBookNow;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBoxBoardingPoint;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Age;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Gender;
+        private System.Windows.Forms.DataGridViewComboBoxColumn BerthPreference;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn SeniorCitizen;
     }
 }
 
